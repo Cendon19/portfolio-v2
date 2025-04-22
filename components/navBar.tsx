@@ -1,9 +1,9 @@
 'use client'
-import { Mail, Phone } from 'lucide-react';
-import Image from 'next/image';
+import { Mail, Download } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { AvatarCircles } from './magicui/avatar-circles';
-import { avatar } from './avatar';
+import { avatar } from '../data/avatar';
+import Link from 'next/link';
 
 export default function NavBar() {
 
@@ -27,8 +27,18 @@ export default function NavBar() {
                 <AvatarCircles avatarUrls={avatar} />
                 <ul className='flex flex-row gap-14'>
                     <li>
+                        <Link href={`resume.pdf`}
+                            className="text-white flex items-center gap-4 transform transition-transform duration-300 hover:scale-125"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                        >
+                                <Download color="white" />
+                        </Link>
+                    </li>
+                    <li>
                         <a className="text-white flex items-center gap-4 transform transition-transform duration-300 hover:scale-125" href="mailto:a.cendon19@gmail.com">
-                            <Mail color="black" />
+                            <Mail color="white" />
                         </a>
                     </li>
                 </ul>
