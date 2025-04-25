@@ -28,7 +28,7 @@ export default function NavBar() {
                 <ul className='flex flex-row gap-14'>
                     <li>
                         <Link href={`resume.pdf`}
-                            className="text-white flex items-center gap-4 transform transition-transform duration-300 hover:scale-125"
+                            className="text-[#FAF7F0] flex items-center gap-4 transform transition-transform duration-300 hover:scale-125"
                             target="_blank"
                             rel="noopener noreferrer"
                             download
@@ -37,7 +37,7 @@ export default function NavBar() {
                         </Link>
                     </li>
                     <li>
-                        <a className="text-white flex items-center gap-4 transform transition-transform duration-300 hover:scale-125" href="mailto:a.cendon19@gmail.com">
+                        <a className="text-[#FAF7F0] flex items-center gap-4 transform transition-transform duration-300 hover:scale-125" href="mailto:a.cendon19@gmail.com">
                             <Mail color="white" />
                         </a>
                     </li>
