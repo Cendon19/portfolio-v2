@@ -4,6 +4,7 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import { TextReveal } from "@/components/magicui/text-reveal";
 import { Github, Linkedin } from "lucide-react";
 import { imagesCloud } from "@/data/cloud";
+import { MagicCard } from "@/components/magicui/magic-card";
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-[#FAF7F0] px-8 font-mono text-[#293133]">
+      <section className="w-full bg-[#FAF7F0] px-8 font-mono text-[#151312]">
         <div className="container mx-auto flex items-center justify-center w-full py-[75px] px-30">
           <TextAnimate
             className="text-base sm:text-lg italic font-medium cursor-default text-center"
@@ -56,7 +57,7 @@ export default function Home() {
           </TextAnimate>
         </div>
       </section>
-      <section className="w-full bg-[#293133] py-[150px] font-mono text-[#FAF7F0]">
+      <section className="w-full bg-[#151312] py-[150px] font-mono text-[#FAF7F0]">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="p-10 flex flex-col justify-center items-start">
             <h1 className="text-3xl font-bold pb-4">
@@ -64,33 +65,12 @@ export default function Home() {
                 Stack
               </TextAnimate>
             </h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+            <MagicCard className="flex flex-col justify-center items-start gap-4 w-full p-4 bg-[#151312] text-[#FAF7F0] rounded-lg">
+              <div>
+                <p>Hello World</p>
+                <span>Hover me</span>
+              </div>
+            </MagicCard>
           </div>
           <div className="p-10 flex flex-col justify-center items-center">
             <IconCloud images={imagesCloud} />
