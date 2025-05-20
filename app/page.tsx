@@ -1,11 +1,19 @@
+"use client";
 import { HyperText } from "@/components/magicui/hyper-text";
 import { IconCloud } from "@/components/magicui/icon-cloud";
 import { TextAnimate } from "@/components/magicui/text-animate";
-import { TextReveal } from "@/components/magicui/text-reveal";
 import { Github, Linkedin } from "lucide-react";
 import { imagesCloud } from "@/data/cloud";
+import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <section
@@ -57,42 +65,77 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full bg-[#151312] py-[150px] font-mono text-[#FAF7F0]">
-        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="p-10 flex flex-col justify-center items-start">
-            <h1 className="text-3xl font-bold pb-4">
-              <TextAnimate animation="slideLeft" by="character">
-                Stack
-              </TextAnimate>
-            </h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently
-              with desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
-            </p>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+        <h1 className="container mx-auto text-3xl px-40 font-bold flex lg:justify-start justify-center">
+          <TextAnimate animation="slideLeft" by="character">
+            Stack
+          </TextAnimate>
+        </h1>
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="p-20 flex flex-col justify-center items-center lg:items-start h-max lg:col-span-2">
+            <div className="flex items-center mb-2 text-[#151312] gap-5 flex-wrap justify-center">
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src="https://cdn.simpleicons.org/nextdotjs/nextdotjs" alt="Nextjs" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">Next JS</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="100">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src="https://cdn.simpleicons.org/react/react" alt="Reactjs" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">React JS</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="150">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src="https://cdn.simpleicons.org/javascript/javascript" alt="Javascript" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">Javascript</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="200">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src="https://cdn.simpleicons.org/Typescript/Typescript" alt="Typescript" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">Typescript</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="250">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src={`tailwind.svg`} alt="tailwind" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">Tailwind</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="300">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src="https://cdn.simpleicons.org/Bootstrap/Bootstrap" alt="Bootstrap" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">Bootstrap</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="350">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src={`magicui.png`} alt="MagicUI" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">Magic UI</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="400">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src="https://cdn.simpleicons.org/jest/jest" alt="Jest" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">Jest</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="450">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src="https://cdn.simpleicons.org/git/git" alt="Git" className="h-16 w-16" />
+                  <h4 className="text-base font-semibold truncate">Git</h4>
+                </div>
+              </NeonGradientCard>
+              <NeonGradientCard data-aos="fade-right" data-aos-duration="1000" className="ease-in duration-150 w-32" data-aos-delay="500">
+                <div className="gap-2 flex items-center flex-col">
+                  <img src={`dots.svg`} alt="dots" className="w-16" />
+                  <h4 className="text-base font-semibold truncate">And More</h4>
+                </div>
+              </NeonGradientCard>
+            </div>
           </div>
-          <div className="p-10 flex flex-col justify-center items-center">
+          <div className="p-20 flex flex-col justify-center items-center" data-aos="zoom-in">
             <IconCloud images={imagesCloud} />
           </div>
         </div>
